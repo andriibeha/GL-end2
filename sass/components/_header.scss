@@ -1,0 +1,115 @@
+.header { 
+    & { 
+        background-color: #000000;
+
+        padding: 5px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        & { 
+            padding: 15px;
+        }        
+    }
+
+    @media screen and (min-width: 1920px) {
+        & { 
+            padding: 0;
+        }
+    }
+
+    &__logo { 
+        padding-top: 10px;
+
+        @media screen and (min-width: 1920px) {
+            padding-top: 24px;
+            padding-bottom: 24px;
+        }
+    }
+
+    /*FOR Mobile only*/
+    &__mobile { 
+        margin-top: 15px;
+
+        display: flex;
+
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__mobile { 
+            display: flex;
+        }
+
+        &__container { 
+            display: flex;
+
+        justify-content: space-between;
+        }
+    }
+    /*End for mobile */
+    &__link { 
+        color: #ffffff;
+
+        position: relative;
+
+        margin-right: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__link { 
+            margin-right: 25px;
+        }
+    }
+
+    @media screen and (min-width: 1920px) {
+        &__link  { 
+            margin-right: 64px;
+        }
+    }
+
+    &__link::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -4px;
+        border: 1px solid #ffffff;
+        border-radius: 2px;
+        opacity: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__link::after {
+            bottom: -8px;
+        }
+    }
+    
+    &__link.current::after {
+        opacity: 1;
+    }
+
+    &__link-lan { 
+        color: #ffffff;
+    }
+
+    
+}
+
+.current {
+
+    &,
+    &-lan {
+        font-weight: 600;
+    }
+
+    &-lan::after {
+        content: "";
+
+        margin-right: 4px;
+        margin-left: 4px;
+        opacity: 0.7;
+
+        border: 1px solid #ffffff;
+        transform: rotate(90deg);
+    }
+}

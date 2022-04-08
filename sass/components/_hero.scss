@@ -1,0 +1,106 @@
+.hero { 
+    &__img  {
+        display: block;
+
+
+        position: absolute;
+        width: 250px;
+
+        right: 0px;
+        top: 80px;
+        float: right;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__img { 
+            display: block;
+
+            width: 800px;
+
+            
+
+            right: 0px;
+            top: 80px;
+            float: right;
+        }
+    }
+
+    @media screen and (min-width: 1920px) {
+        &__img { 
+            width: 1230px;
+
+
+        }
+    }
+
+    & { 
+        background-color: #000000;
+
+        @media screen and (min-width: 1200px) {
+            & { 
+                height: 600px;
+            }
+        }
+
+        @media screen and (min-width: 1920px) {
+            & { 
+                height: 937px;
+            }
+        }
+    }
+
+    &__title { 
+        color: #ffffff;
+
+        padding-top: 50px;
+        padding-bottom: 25px;
+
+        font-size: 34px;
+
+        position: relative;
+        z-index: 10;
+
+        @media screen and (min-width: 1200px) {
+            & { 
+                font-size: 48px;
+                width: 300px;
+
+                padding-left: 50px;
+            }
+        }
+
+        @media screen and (min-width: 1920px) {
+            font-size: 100px;
+            width: 680px;
+            padding-left: 0;
+
+            position: absolute;
+            z-index: 10;
+
+            top: 230px;
+
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__btn { 
+        margin-bottom: 20px;
+
+                position: relative;
+                z-index: 10;
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 50px;
+        }
+
+        @media screen and (min-width: 1920px) {
+            position: relative;
+
+            bottom: -687px;
+
+            margin-left: 0;
+        }
+    }
+}
+

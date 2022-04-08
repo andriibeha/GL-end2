@@ -1,0 +1,35 @@
+//Gilroy 700
+//Gilroy 600
+//Gilroy 400
+
+//font-family: 'Open Sans', sans-serif;
+
+body {
+  
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  letter-spacing: 0.02em;
+}
+
+.logo {
+  color: var(--primary-white-color);
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+.title {
+  color: var(--primary-black-color);
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}

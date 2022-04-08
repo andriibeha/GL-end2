@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Limited LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="sass/owl.theme.default.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="./index.html" class="logo header__logo">Global Limited LLC</a>
+
+            <div class="header__mobile">
+                <ul class="header__nav list">
+                    <a href="index.html" class="header__link ">Home</a>
+                    <a href="./contacts.html" class="header__link current">Contacts</a>
+                    <a href="./privacy.html" class="header__link">Privacy Policy</a>
+                </ul>
+                
+                <ul class="header__language list">
+                    <a href="#" class="header__link-lan current-lan">En</a>
+                    <a href="indexru.html" class="header__link-lan ">Ru</a>
+                </ul>
+            </div>
+            
+        </div>
+
+    </header>
+
+    <main>
+        <!--Contacts Hero-->
+        <section class="contacts-hero">
+            <div class="container">
+                <h1 class="title contacts-hero contacts-hero__h1">
+                    Site Notice
+                </h1>
+                
+                <ul class="list contacts-hero__list">
+                    <li class="contacts-hero-item contacts-hero__l1">
+                        <h2 class="title contacts-hero__title">
+                            Legal Information
+                        </h2>
+                
+                        <p class="contacts-hero__text">
+                            Global Limited LLC
+                            <br>
+                            Trust House, 112 Bonadie Street, P.O. Box 613, Kingswtown, Saint Vincent
+                        </p>
+                    </li>
+                
+                    <li class="contacts-hero-item contacts-hero__l2">
+                        <h2 class="title contacts-hero__title">
+                            Dispute resolution proceedings
+                            in front of a consumer arbitration board
+                        </h2>
+                
+                        <p class="contacts-hero__text">
+                            We are not willing or obliged to participate in dispute resolution
+                            proceedings in front of a consumer arbitration board.
+                        </p>
+                    </li>
+                
+                    <li class="contacts-hero-item contacts-hero__l3">
+                        <h2 class="title contacts-hero__title">
+                            Contact
+                        </h2>
+                
+                        <p class="contacts-hero__text">
+                            E-mail: enquiry@global.limited.llc
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <!--Form-->
+        <section class="form">
+            <div class="container form__container">
+        
+                <h2 class="title form__title">
+                    Do you want to work with us?
+                </h2>
+        
+                <p class="form__sub-title">
+                    Let’s make your business digital! We are happy to assist!
+                </p>
+        
+                <!--Форма залишити контакти Імя пошта телефон коментар-->
+                <a id="forma"></a>
+        
+                <form class="forma" action="#" id="form">
+        
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="Global Limited LLC">
+                    <input type="hidden" name="admin_email" value="andrii.beha@gmail.com">
+                    <input type="hidden" name="form_subject" value="Footer form">
+                    <!-- END Hidden Required Fields -->
+        
+                    <input type="text" id="name" name="name" placeholder="Your Name" class="forma-input forma__name">
+        
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" class="forma-input forma__phone">
+        
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="forma-input forma__email">
+        
+        
+                    <button type="submit" class="primary__button form__button">
+                        Send your message
+                    </button>
+                </form>
+            </div>
+        
+        </section>
+        </main>
+        
+        <!--Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wraper">
+                    <p class="footer__copyrigth">
+                        2022 © Global Limited LLC IT Services, Business Company Number
+                        26050 BC 2020 112 Bonadie Street, P.O. Box 613,
+                        Kingstown, Saint Vincent
+                    </p>
+        
+                    <!--UP Button-->
+                    <button onclick="topFunction()" id="myBtn" title="Go to top" class="top-button">Top</button>
+                </div>
+        
+            </div>
+        </footer>
+        
+        <!------------------------------------------SCRTIPTS----------------------------------------------------->
+        
+        
+        
+        <!--UP Button script-->
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        
+        
+        <!--FORM SEND EMAIL script-->
+        <script>
+            $(document).ready(function () {
+
+                //E-mail Ajax Send
+                $("form").submit(function () { //Change
+                    var th = $(this);
+                    $.ajax({
+                        type: "POST",
+                        url: "mail.php", //Change
+                        data: th.serialize()
+                    }).done(function () {
+                        alert("Thank you!");
+                        setTimeout(function () {
+                            // Done Functions
+                            th.trigger("reset");
+                        }, 1000);
+                    });
+                    return false;
+                });
+
+            });
+        </script>
+        
+        <!--Slick Slider-->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.slider').slick({
+
+                });
+            });
+        </script>
+        
+        </body>
+        
+        </html>

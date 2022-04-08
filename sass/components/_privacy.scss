@@ -1,0 +1,62 @@
+.privacy {
+    &__title--h1 {
+        margin-top: 160px;
+
+        margin-bottom: 120px;
+
+        position: relative;
+
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 100%;
+    }
+
+    &__title--h1::after {
+        content: "";
+
+        position: absolute;
+        border: 1px solid #000000;
+        width: 100%;
+
+        left: 0;
+        bottom: -40px;
+    }
+
+    &__num-title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        /* identical to box height, or 40px */
+
+        letter-spacing: -0.02em;
+
+        color: #000000;
+
+        margin-bottom: 80px;
+    }
+
+    &__sub-title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 100%;
+        /* identical to box height, or 32px */
+
+        letter-spacing: -0.02em;
+
+        color: #000000;
+
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        /* or 24px */
+
+
+        color: #000000;
+
+        margin-bottom: 80px;
+    }
+}

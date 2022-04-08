@@ -1,0 +1,95 @@
+/*Утиліта*/
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body  { 
+  margin: 0;
+}
+
+body li {
+  list-style-type: none;
+}
+
+/*Обнуляю всі відступи стандартні*/
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Secrion*/
+section {
+  margin-bottom: 120px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 180px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 280px;
+  }
+}
+
+/*CONTAINER*/
+.container { 
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 375px) {
+  .container { 
+    width: 345px;
+
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media screen and(min-width: 1200px) {
+  .container { 
+    width: 1140px;
+
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+ .container { 
+   width: 1400px;
+
+   padding-right: 260px;
+   padding-left: 260px;
+ } 
+}
+
+
+  
+
